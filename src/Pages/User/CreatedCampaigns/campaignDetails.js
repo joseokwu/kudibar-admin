@@ -6,6 +6,8 @@ import { StatCard } from "./StatCard";
 import { CardsContainer } from "./campaigns.styles";
 import Analytics from "../navSection/Analytics.screen";
 import Members from "../navSection/Members.screen";
+import Beneficiary from "../navSection/Beneficiary.screen";
+import Rules from "../navSection/Rules.screen";
 const CampaignDetails = () => {
   const navItem = ["Analytics", "Members", "Beneficiaries", "Rules"];
   const [navTabs, setNavTabs] = useState("Analytics");
@@ -75,9 +77,9 @@ const CampaignDetails = () => {
           ) : navTabs === "Members" ? (
             <Members />
           ) : navTabs === "Rules" ? (
-            <div>Rules</div>
+            <Rules />
           ) : navTabs === "Beneficiaries" ? (
-            <div>Beneficiaries</div>
+            <Beneficiary />
           ) : (
             ""
           )}
