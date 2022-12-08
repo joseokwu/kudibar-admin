@@ -1,0 +1,41 @@
+.RoundTabs {
+	border-bottom: 0.5px solid rgba(18, 21, 40, 0.05);
+	padding-right: 0.5rem;
+	margin-bottom: 2rem;
+
+	display: flex;
+	flex-direction: row;
+	gap: 2.75rem;
+}
+
+.RoundTabs .tabItem {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: rgba(18, 21, 40, 0.6);
+	cursor: pointer;
+}
+
+.RoundTabs .tabItem--current {
+	color: #39bd78;
+	border-bottom: 1px solid #39bd78;
+}
+.RoundTabs .tabItem--current .tabItemLine {
+	opacity: 1;
+}
+
+.RoundTabs .tabItem .tabItemText {
+	padding: 0 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.RoundTabs .tabItem .tabItemLine {
+	width: 100%;
+	height: 3px;
+	border-radius: 2px;
+	background-color: #32c1cc;
+	transform: translateY(50%);
+	opacity: 0;
+	transition: opacity 0.4s;
+}
