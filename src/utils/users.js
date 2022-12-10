@@ -102,6 +102,98 @@ export const createdCampaign = [
   },
 ];
 
+export const contributionType = [
+  {
+    title: "Arthur’s Wedding",
+    type: "Celebration",
+    paymentMethod: "bank transfer",
+    amount: "$100",
+    date: "26 Mar ‘20, at 13:45 PM",
+    status: "Successful",
+  },
+  {
+    title: "Arthur’s Wedding",
+    type: "Celebration",
+    paymentMethod: "bank transfer",
+    amount: "$100",
+    date: "26 Mar ‘20, at 13:45 PM",
+    status: "Pending",
+  },
+  {
+    title: "Arthur’s Wedding",
+    type: "Celebration",
+    paymentMethod: "bank transfer",
+    amount: "$100",
+    date: "26 Mar ‘20, at 13:45 PM",
+    status: "Completed",
+  },
+  {
+    title: "Arthur’s Wedding",
+    type: "Celebration",
+    paymentMethod: "bank transfer",
+    amount: "$100",
+    date: "26 Mar ‘20, at 13:45 PM",
+    status: "Failed",
+  },
+];
+
+export const invitedCampaign = [
+  {
+    title: "Arthur’s Wedding",
+    type: "Celebration",
+    createdBy: "Awale Stephanie",
+    status: "Referee",
+  },
+  {
+    title: "Arthur’s Wedding",
+    type: "Celebration",
+    createdBy: "Awale Stephanie",
+    status: "Member",
+  },
+  {
+    title: "Arthur’s Wedding",
+    type: "Celebration",
+    createdBy: "Awale Stephanie",
+    status: "Referee",
+  },
+  {
+    title: "Arthur’s Wedding",
+    type: "Celebration",
+    createdBy: "Awale Stephanie",
+    status: "Member",
+  },
+];
+export const allCampaigns = [
+  {
+    title: "Arthur’s Wedding",
+    category: "Celebration",
+    creator: "Awale Stephanie",
+    date: "Referee",
+    status: "Published",
+  },
+  {
+    title: "Arthur’s Wedding",
+    category: "Celebration",
+    creator: "Awale Stephanie",
+    date: "Referee",
+    status: "Published",
+  },
+  {
+    title: "Arthur’s Wedding",
+    category: "Celebration",
+    creator: "Awale Stephanie",
+    date: "Referee",
+    status: "Published",
+  },
+  {
+    title: "Arthur’s Wedding",
+    category: "Celebration",
+    creator: "Awale Stephanie",
+    date: "Referee",
+    status: "Published",
+  },
+];
+
 export const AnalyticsData = [
   {
     email: "obodobright0@gmail.com",
@@ -166,5 +258,44 @@ export const membersData = [
     bg: "black",
     amount: "100",
     time: "26 Feb 2022, at 13:45 PM",
+  },
+];
+
+export const supportData = [
+  {
+    id: "1",
+    sender: "Anthony Tiamz",
+    date: "09/03/2022",
+    time: "13:00pm",
+    subject: "Money Refund..",
+    priority: "urgent",
+    status: "Pending",
+  },
+  {
+    id: "2",
+    sender: "Wale Hassan",
+    date: "09/03/2022",
+    time: "13:00pm",
+    subject: "Money Refund..",
+    priority: "low",
+    status: "Open",
+  },
+  {
+    id: "3",
+    sender: "Adekunle Gold",
+    date: "09/03/2022",
+    time: "13:00pm",
+    subject: "Money Refund..",
+    priority: "medium",
+    status: "Close",
+  },
+  {
+    id: "4",
+    sender: "Anthony Tiamz",
+    date: "09/03/2022",
+    time: "13:00pm",
+    subject: "Money Refund..",
+    priority: "medium",
+    status: "Close",
   },
 ];
