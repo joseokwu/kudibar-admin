@@ -13,7 +13,7 @@ import Chart from "../../component/chart/chart.component";
 const Dashboard = () => {
 	return (
 		<div className=" w-full ">
-			<div className="flex items-center ">
+			<div className="grid grid-cols-3 gap-6">
 				<DashboardCard
 					bgColor={bgVector}
 					title={"Total Users"}

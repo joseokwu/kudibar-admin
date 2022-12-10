@@ -29,7 +29,7 @@ const TransactionHistory = () => {
 
 	return (
 		<div>
-			<div className="flex items-center justify-between gap-4 mb-8">
+			<div className="grid grid-cols-4 gap-4 mb-8">
 				<DashboardCard
 					bgColor={bgVector}
 					title={"Total Users"}

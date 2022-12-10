@@ -16,7 +16,7 @@ const Support = () => {
 
 	return (
 		<div>
-			<div className="flex items-center justify-between gap-4 mb-10">
+			<div className="grid grid-cols-4 gap-4 mb-10">
 				<DashboardCard
 					bgColor={bgVector}
 					title={"Total Users"}
