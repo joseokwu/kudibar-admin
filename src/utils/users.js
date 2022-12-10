@@ -141,6 +141,51 @@ export const TransactionHistoryData = [
 	},
 ];
 
+export const CampaignData = [
+	{
+		title: "Fight Cancer in Africa...",
+		category: "Celebration",
+		creator: "Chinmay Sarasvati",
+		date: "25th Feb 2022",
+		status: "Successful",
+	},
+	{
+		title: "Fight Cancer in Africa...",
+		category: "Celebration",
+		creator: "Chinmay Sarasvati",
+		date: "25th Feb 2022",
+		status: "Successful",
+	},
+	{
+		title: "Fight Cancer in Africa...",
+		category: "Celebration",
+		creator: "Chinmay Sarasvati",
+		date: "25th Feb 2022",
+		status: "Successful",
+	},
+	{
+		title: "Fight Cancer in Africa...",
+		category: "Celebration",
+		creator: "Chinmay Sarasvati",
+		date: "25th Feb 2022",
+		status: "Successful",
+	},
+	{
+		title: "Fight Cancer in Africa...",
+		category: "Celebration",
+		creator: "Chinmay Sarasvati",
+		date: "25th Feb 2022",
+		status: "Successful",
+	},
+	{
+		title: "Fight Cancer in Africa...",
+		category: "Celebration",
+		creator: "Chinmay Sarasvati",
+		date: "25th Feb 2022",
+		status: "Successful",
+	},
+];
+
 export const paymentData = [
 	{
 		title: "Monopoly Game",

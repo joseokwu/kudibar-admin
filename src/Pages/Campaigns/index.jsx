@@ -13,10 +13,19 @@ import { useNavigate } from "react-router-dom";
 import SearchBar from "../../component/SearchBar";
 import Tabs from "../../component/Tabs";
 import MUITable from "../../component/Table";
-import { TransactionHistoryData } from "../../utils/users";
+import { CampaignData } from "../../utils/users";
 import SearchFilterBar from "../../component/SearchFilterBar";
 
 const Campaigns = () => {
+	const headers = [
+		{ label: "Title", key: "title" },
+		{ label: "Category", key: "category" },
+		{ label: "Creator", key: "creator" },
+		{ label: "Date", key: "date" },
+		{ label: "Status", key: "status" },
+		{ label: "Action", key: "action" },
+	];
+
 	return (
 		<div>
 			<div className="flex items-center justify-between gap-4 mb-8">
@@ -49,11 +58,20 @@ const Campaigns = () => {
 					bg={"#C8FFE2"}
 				/>
 			</div>
-			<div>
+			<div className="mb-4">
 				<SearchFilterBar />
 			</div>
 			<div>
-				<WhiteCard></WhiteCard>
+				<WhiteCard>
+					<Tabs
+						tabItems={[
+							"Private Campaigns (20)",
+							"Public Campaign (10)",
+							"Yebora’s Campaign (2)",
+						]}
+					/>
+					<MUITable headers={headers} bodyData={CampaignData} />
+				</WhiteCard>
 			</div>
 		</div>
 	);
