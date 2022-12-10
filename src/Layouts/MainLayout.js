@@ -19,7 +19,9 @@ const MainLayout = (props) => {
 			<Sidebar />
 			<section className={`${styles.section}`}>
 				<Header isCrossed={isCrossed} />
-				<main className="py-7 px-10 mt-[56px] md:mt-0 h-screen scroll_hide overflow-scroll">
+				<main
+					className={`py-7 px-20 mt-[56px] md:mt-0 scroll_hide overflow-scroll ${styles.scrollyBit}`}
+				>
 					<Outlet />
 				</main>
 			</section>

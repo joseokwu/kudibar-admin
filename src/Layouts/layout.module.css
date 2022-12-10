@@ -6,7 +6,7 @@
 	display: grid;
 	grid-template-columns: 273px 1fr;
 	box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1);
-	min-height: 100vh;
+	height: 100vh;
 	/* display: none; */
 }
 
@@ -30,8 +30,13 @@
 
 .section {
 	width: 100%;
+	/* overflow: scroll; */
 	/* border-right: var(--color-gray-light-1); */
 	/* display: none; */
+}
+
+.scrollyBit {
+	height: calc(100vh - 56px);
 }
 
 @media (min-width: 940px) {

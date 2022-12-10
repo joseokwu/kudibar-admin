@@ -77,6 +77,70 @@ export const financeMgtData = [
 	},
 ];
 
+export const allTicketsData = [
+	{
+		id: "#1",
+		sender: "Anthony Jude",
+		date: "09/03/2022",
+		time: "13:00pm",
+		subject: "Money Refund",
+		priority: "Urgent",
+		status: "Open",
+		// priority: "Urgent",
+	},
+	{
+		id: "#2",
+		sender: "Anthony Jude",
+		date: "09/03/2022",
+		time: "13:00pm",
+		subject: "Money Refund",
+		priority: "Low",
+		status: "Pending",
+		// priority: "Urgent",
+	},
+	{
+		id: "#3",
+		sender: "Anthony Jude",
+		date: "09/03/2022",
+		time: "13:00pm",
+		subject: "Money Refund",
+		priority: "Meduim",
+		status: "Close",
+		// priority: "Urgent",
+	},
+];
+
+export const TransactionHistoryData = [
+	{
+		payment_id: "5687856677667",
+		date: "1/03/2022",
+		amount: "+40,000",
+		type: "Credit",
+		status: "Successful",
+	},
+	{
+		payment_id: "5687856677667",
+		date: "1/03/2022",
+		amount: "+40,000",
+		type: "Credit",
+		status: "Failed",
+	},
+	{
+		payment_id: "5687856677667",
+		date: "1/03/2022",
+		amount: "+40,000",
+		type: "Debit",
+		status: "Successful",
+	},
+	{
+		payment_id: "5687856677667",
+		date: "1/03/2022",
+		amount: "+40,000",
+		type: "Credit",
+		status: "Successful",
+	},
+];
+
 export const paymentData = [
 	{
 		title: "Monopoly Game",
