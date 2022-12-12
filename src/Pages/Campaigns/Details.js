@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import HeaderTop from "../../../component/Header/HeaderTop";
-import BaseLayout from "../../../component/Layout";
+import HeaderTop from "../../component/Header/HeaderTop";
+import BaseLayout from "../../component/Layout";
 import { Link } from "react-router-dom";
-import { StatCard } from "./StatCard";
-import { CardsContainer } from "./campaigns.styles";
-import Analytics from "../navSection/Analytics.screen";
-import Members from "../navSection/Members.screen";
-import Beneficiary from "../navSection/Beneficiary.screen";
-import Rules from "../navSection/Rules.screen";
-const CampaignDetails = () => {
+import { StatCard } from "../User/CreatedCampaigns/StatCard";
+import { CardsContainer } from "../User/CreatedCampaigns/campaigns.styles";
+import Analytics from "../User/navSection/Analytics.screen";
+import Members from "../User/navSection/Members.screen";
+import Beneficiary from "../User/navSection/Beneficiary.screen";
+import Rules from "../User/navSection/Rules.screen";
+const Details = () => {
   const navItem = ["Analytics", "Members", "Beneficiaries", "Rules"];
   const [navTabs, setNavTabs] = useState("Analytics");
 
@@ -17,9 +17,17 @@ const CampaignDetails = () => {
   };
   return (
     <>
-      <HeaderTop text={"Arthur’s Wedding Contribution"} path={"/users/user/created-campaigns"}>
-        <Link>View details</Link>
+      <HeaderTop text={"Arthur’s Wedding Contribution"} path={"/campaigns"}>
+        <div className="text-[#328BE0] font-[600] underline">
+          <Link>View details</Link>
+        </div>
       </HeaderTop>
+      <section className="flex  justify-end items-center ">
+        <button className="mt-3 py-[8px] px-[1rem] rounded-[8px] bg-[#E1ECE7] text-[#137C4B]">
+          <p>Publish campaign</p>
+        </button>
+      </section>
+
       <section>
         <CardsContainer>
           <StatCard
@@ -88,4 +96,4 @@ const CampaignDetails = () => {
     </>
   );
 };
-export default CampaignDetails;
+export default Details;
