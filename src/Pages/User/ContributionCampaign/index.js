@@ -3,16 +3,17 @@ import BaseLayout from "../../../component/Layout";
 import swapIcon from "../../../assets/svg/Swap.svg";
 import filterIcon from "../../../assets/svg/Filter.svg";
 import searchIcon from "../../../assets/svg/Search.svg";
-import { createdCampaign } from "../../../utils/users";
+import { contributionType } from "../../../utils/users";
 import nouserIcon from "../../../assets/svg/nousericon.svg";
 import CreatedCampaignTable from "../../../component/Table/createdCampaignTable";
-const CreatedCampaign = () => {
-  const userTableHeader = ["Title", "Type", "Date", "Time", "Status", "Action"];
+import ContributionTable from "../../../component/Table/contributionTable";
+const ContributionCampaign = () => {
+  const userTableHeader = ["Title", "Type", "Payment Mode", "Amount", "Date", "Status"];
   return (
-    <div>
-      <HeaderTop text={"Created Campaign"} path="/users/user" />
+    <>
+      <HeaderTop text={"Contribution Transaction History"} path="/users/user" />
 
-      {createdCampaign.length > 0 ? (
+      {contributionType.length > 0 ? (
         <>
           <div className="mt-6 bg-white rounded-[12px] p-4 flex items-center gap-[8px] ">
             <button className="flex items-center justify-center border-[#1215281A]  w-[7rem] py-[5px]  gap-[4px]  border-[1px] rounded-[8px]">
@@ -35,7 +36,7 @@ const CreatedCampaign = () => {
             <section></section>
           </div>
           <section className="mt-5 p-4 w-full bg-white rounded-md">
-            <CreatedCampaignTable tableHeader={userTableHeader} campaigns={createdCampaign} />
+            <ContributionTable tableHeader={userTableHeader} campaigns={contributionType} />
           </section>
         </>
       ) : (
@@ -43,10 +44,10 @@ const CreatedCampaign = () => {
           <div className="w-[150px] h-[150px] rounded-[50%] flex justify-center items-center bg-[#F5F5F5] ">
             <img src={nouserIcon} alt="" />
           </div>
-          <div className="text-[24px] font-semibold mt-3">No User yet</div>
+          <div className="text-[24px] font-semibold mt-3">No Donation yet</div>
         </section>
       )}
-    </div>
+    </>
   );
 };
-export default CreatedCampaign;
+export default ContributionCampaign;

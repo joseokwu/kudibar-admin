@@ -11,6 +11,7 @@ export const ActionContainer = styled.div`
   right: 0px;
   .btn {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 0.6rem 0.8rem;
     border-radius: 8px;
@@ -32,6 +33,7 @@ export const Status = styled.div`
   justify-content: center;
   border-radius: 8px;
   gap: 4px;
+  text-align: center;
 
   span {
     color: #12152899;
@@ -43,4 +45,12 @@ export const StatusSignal = styled.div`
   height: 10px;
   border-radius: 50%;
   background-color: ${({ bg }) => bg};
+`;
+
+export const StatusBar = styled.div`
+  padding: 5px 1rem;
+  border-radius: 0.5rem;
+  background: ${({ bg }) => bg};
+  color: #fff;
+  text-align: center;
 `;

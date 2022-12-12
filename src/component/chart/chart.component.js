@@ -5,7 +5,7 @@ const Chart = () => {
         <p>Total Visit - 300</p>
         <select className="text-[#12152899] font-[14px] p-[0.4rem] border-[1px] rounded border-[#1215281A]">
           <option value="">Most users</option>
-          <option value="Most Recent">Dailyt</option>
+          <option value="Most Recent">Daily</option>
           <option value="Most Recent">Weekly</option>
           <option value="Most Recent">Monthly</option>
           <option value="Most Recent">Yearly</option>
