@@ -25,34 +25,6 @@ const Support = () => {
         <SupportCard tp rg bgColor={bgVector2} value={"500"} title="Unassigned" />
         <SupportCard bt rg bgColor={greenVector} value={"250"} title="Opened" />
         <SupportCard bt rg bgColor={pinkVector} value={"2000"} title="Closed" />
-        {/* <DashboardCard
-          bgColor={bgVector}
-          title={"Total Users"}
-          icon={usericon}
-          value={"40"}
-          bg="#FFF4DE"
-        />
-        <DashboardCard
-          bgColor={bgVector2}
-          title={"Total Campaigns"}
-          icon={charticon}
-          value={"5"}
-          bg={"#D7EAFC"}
-        />
-        <DashboardCard
-          bgColor={bgVector3}
-          title={"Total Commision"}
-          icon={cardicon}
-          value={"$30k"}
-          bg={"#C8FFE2"}
-        />
-        <DashboardCard
-          bgColor={bgVector3}
-          title={"Total Commision"}
-          icon={cardicon}
-          value={"$30k"}
-          bg={"#C8FFE2"}
-        /> */}
       </div>
       <WhiteCard>
         <div className="flex flex-row items-center justify-between mb-6">

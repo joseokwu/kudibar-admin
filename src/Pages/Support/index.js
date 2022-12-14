@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const Support = () => {
   const navigate = useNavigate();
   return (
-    <BaseLayout>
+    <>
       <div className="w-full">
         <div className="flex items-center">
           <SupportCard tp rg bgColor={bgVector} value={"20,000"} title="Total Tickets" />
@@ -47,7 +47,7 @@ const Support = () => {
           </main>
         </div>
       </div>
-    </BaseLayout>
+    </>
   );
 };
 export default Support;

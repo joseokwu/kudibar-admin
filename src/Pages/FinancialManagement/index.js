@@ -10,6 +10,7 @@ import { users, financeMgtData } from "../../utils/users";
 import WhiteCard from "../../component/WhiteCard";
 import Button from "../../component/Button/button";
 import Input from "../../component/Input";
+import { TitleTag } from "../../component/Header/TitleTag";
 
 const FinancialManagement = () => {
   const headers = [
@@ -27,9 +28,7 @@ const FinancialManagement = () => {
 
   return (
     <div>
-      <div className="my-2">
-        <p className="text-[24px] font-semibold">Financial Management</p>
-      </div>
+      <TitleTag title="Financial Management" />
       <WhiteCard>
         <Tabs tabItems={["Mark Up / Down", "Accounts", "Countries & Currencies"]} />
         <div className="flex flex-row gap-3 justify-between">

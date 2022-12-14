@@ -17,7 +17,7 @@ import AllTickets from "./Pages/Support/AllTickets";
 import TicketsNotifications from "./Pages/Support/Notifications";
 import TransactionHistory from "./Pages/TransactionHistory";
 import ViewTicket from "./Pages/Support/ViewTicket";
-
+import Settings from "./Pages/Settings";
 function App() {
   return (
     <Router>
@@ -32,7 +32,7 @@ function App() {
           <Route path="/support/all-tickets" element={<AllTickets />} />
           <Route path="/support/view-ticket/:id" element={<ViewTicket />} />
           <Route path="/support/all-notif" element={<TicketsNotifications />} />
-          <Route path="/settings" element={<></>} />
+          <Route path="/settings" element={<Settings />} />
           <Route path="/campaigns" element={<Campaigns />} />
 
           <Route path="/users/user" element={<UserDetails />} />
