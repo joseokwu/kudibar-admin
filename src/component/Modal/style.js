@@ -29,6 +29,7 @@ export const ModalWrapper = styled.div`
 
     img {
       cursor: pointer;
+      z-index: 1;
     }
   }
 

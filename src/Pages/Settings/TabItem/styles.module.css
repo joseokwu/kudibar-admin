@@ -25,3 +25,7 @@
     margin: 4px 6px;
     width: fit-content;
 }
+
+.icons {
+    cursor: pointer;
+}

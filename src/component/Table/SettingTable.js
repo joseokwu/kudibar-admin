@@ -30,7 +30,7 @@ const SettingTables = ({ data, tableHeader }) => {
                   <p>{roles}</p>
                 </td>
                 <td>
-                  <Link to="/details">
+                  <Link to="/settings/user/details">
                     <p className="text-[#12152899]">View Details</p>
                   </Link>
                 </td>

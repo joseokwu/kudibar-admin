@@ -6,6 +6,7 @@ import { Roles } from "./TabItem/Roles.component";
 import { Users } from "./TabItem/Users.component";
 import { FaTimes } from "react-icons/fa";
 import styles from "./TabItem/styles.module.css";
+import Input from "../../component/Input";
 const Settings = () => {
   const navItem = ["Company Info", "Users", "Roles & Permission"];
   const [navTabs, setNavTabs] = useState("Company Info");
@@ -53,19 +54,29 @@ const Settings = () => {
           <section className="mt-4 flex">
             <div className={`${styles.card} bg-[#C1DCF6]`}>
               <p>Crowdfunding</p>
-              <FaTimes />
+              <FaTimes className="cursor-pointer" />
             </div>
             <div className={`${styles.card} bg-[#EBD6AE]`}>
               <p>Celebration</p>
-              <FaTimes />
+              <FaTimes className="cursor-pointer" />
             </div>
             <div className={`${styles.card} bg-[#B1D9C4]`}>
               <p>Community Contribution</p>
-              <FaTimes />
+              <FaTimes className="cursor-pointer" />
             </div>
             <div className={`${styles.card} bg-[#DFB5B5]`}>
               <p>Friend Games (Betting)</p>
-              <FaTimes />
+              <FaTimes className="cursor-pointer" />
+            </div>
+          </section>
+          <section className="mt-6">
+            <div className="my-4">
+              <label htmlFor="campaign name">Add New Campaign Name</label>
+              <Input placeholder="ex. save the children" />
+            </div>
+            <div className="my-4">
+              <label htmlFor="campaign name">Add Campaign Category</label>
+              <Input placeholder="ex. save the children" />
             </div>
           </section>
         </WhiteCard>

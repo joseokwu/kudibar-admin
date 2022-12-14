@@ -1,7 +1,11 @@
 import "./styles.css";
 
-const Button = ({ variant = "primary", children }) => {
-	return <button className={`Button Button--${variant}`}>{children}</button>;
+const Button = ({ variant = "primary", children, ...props }) => {
+  return (
+    <button {...props} className={`Button Button--${variant}`}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

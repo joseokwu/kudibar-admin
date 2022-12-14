@@ -18,6 +18,8 @@ import TicketsNotifications from "./Pages/Support/Notifications";
 import TransactionHistory from "./Pages/TransactionHistory";
 import ViewTicket from "./Pages/Support/ViewTicket";
 import Settings from "./Pages/Settings";
+import UserSettingDetails from "./Pages/Settings/TabItem/UserDetails.component";
+import RolesDetail from "./Pages/Settings/TabItem/RolesDetails.component";
 function App() {
   return (
     <Router>
@@ -33,6 +35,8 @@ function App() {
           <Route path="/support/view-ticket/:id" element={<ViewTicket />} />
           <Route path="/support/all-notif" element={<TicketsNotifications />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/settings/user/details" element={<UserSettingDetails />} />
+          <Route path="/settings/roles/details" element={<RolesDetail />} />
           <Route path="/campaigns" element={<Campaigns />} />
 
           <Route path="/users/user" element={<UserDetails />} />
