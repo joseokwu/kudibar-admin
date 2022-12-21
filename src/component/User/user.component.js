@@ -8,7 +8,10 @@ const UserTable = () => {
         <p>New User</p>
         <select className="text-[#12152899] font-[14px] p-[0.4rem] border-[1px] rounded border-[#328BE0]">
           <option value="">Most users</option>
-          <option value="Most Recent">Most Recent</option>
+          <option value="Most Recent">
+            <input type="radio" />
+            Most Recent
+          </option>
           <option value="Most Recent">Last 7 days</option>
           <option value="Most Recent">Last 30 days</option>
           <option value="Most Recent">Last quarter</option>

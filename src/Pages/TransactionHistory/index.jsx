@@ -19,17 +19,20 @@ import searchIcon from "../../assets/svg/Search.svg";
 import { TransactionHistoryData } from "../../utils/users";
 import { CardsContainer } from "../User/CreatedCampaigns/campaigns.styles";
 import { StatCard } from "../User/CreatedCampaigns/StatCard";
+import CampaignTable from "../../component/Table/campaignTable";
+import TranzTable from "../../component/Table/TransTable";
 
 const TransactionHistory = () => {
   const navigate = useNavigate();
+  const header = ["Payment Id", "Date", "Amount", "Type", "Status", "Action"];
 
   const headers = [
-    { label: "Payment ID", key: "payment_id" },
-    { label: "Date", key: "date" },
-    { label: "Amount", key: "amount" },
-    { label: "Type", key: "type" },
-    { label: "Status", key: "status" },
-    { label: "Action", key: "action" },
+    { label: "Payment ID", key: "payment_id", action: "actions" },
+    { label: "Date", key: "date", action: "actions" },
+    { label: "Amount", key: "amount", action: "actions" },
+    { label: "Type", key: "type", action: "actions" },
+    { label: "Status", key: "status", action: "actions" },
+    { label: "Action", key: "action", action: "actions" },
   ];
 
   return (
@@ -98,7 +101,12 @@ const TransactionHistory = () => {
       <div className="mb-4">
         <WhiteCard>
           <Tabs tabItems={["All (2000)", "Pending (400)", "Failed (200)", "Successful (1400)"]} />
-          <MUITable headers={headers} bodyData={TransactionHistoryData} />
+          {/* <MUITable headers={headers} bodyData={TransactionHistoryData} /> */}
+          <TranzTable
+            tableHeader={header}
+            data={TransactionHistoryData}
+            // showModal={handleShowModal}
+          />
         </WhiteCard>
       </div>
     </div>

@@ -26,7 +26,7 @@ export const ActionContainer = styled.div`
 `;
 
 export const Status = styled.div`
-  padding: 0.3rem 0;
+  padding: 0.3rem 4px;
   border: 1px solid #1215281a;
   display: flex;
   align-items: center;

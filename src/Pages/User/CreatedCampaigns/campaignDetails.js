@@ -18,7 +18,9 @@ const CampaignDetails = () => {
   return (
     <>
       <HeaderTop text={"Arthur’s Wedding Contribution"} path={"/users/user/created-campaigns"}>
-        <Link>View details</Link>
+        <div className="text-[#328BE0] underline">
+          <Link>View full details</Link>
+        </div>
       </HeaderTop>
       <section>
         <CardsContainer>

@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
 
 export const CardsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: center;
   justify-content: center;
   width: 100%;
 
   @media only screen and (max-width: 1000px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
   @media (max-width: 800px) {
