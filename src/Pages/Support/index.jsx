@@ -1,4 +1,4 @@
-import styles from "./Campaigns.module.css";
+import styles from "./support.module.css";
 import DashboardCard from "../../component/card/dashboardCard/card.component";
 import usericon from "../../assets/svg/users.svg";
 import charticon from "../../assets/svg/chart.svg";
@@ -10,26 +10,13 @@ import UserTable from "../../component/User/user.component";
 import Chart from "../../component/chart/chart.component";
 import WhiteCard from "../../component/WhiteCard";
 import { useNavigate } from "react-router-dom";
-import SearchBar from "../../component/SearchBar";
-import Tabs from "../../component/Tabs";
-import MUITable from "../../component/Table";
-import { CampaignData } from "../../utils/users";
-import SearchFilterBar from "../../component/SearchFilterBar";
 
-const Campaigns = () => {
-	const headers = [
-		{ label: "Title", key: "title" },
-		{ label: "Category", key: "category" },
-		{ label: "Creator", key: "creator" },
-		{ label: "Date", key: "date" },
-		{ label: "Status", key: "status" },
-		{ label: "Action", key: "action" },
-	];
-	const [currentTab, setCurrentTab] = useState(0);
+const Support = () => {
+	const navigate = useNavigate();
 
 	return (
 		<div>
-			<div className="grid grid-cols-4 gap-4 mb-8">
+			<div className="grid grid-cols-4 gap-4 mb-10">
 				<DashboardCard
 					bgColor={bgVector}
 					title={"Total Users"}
@@ -59,25 +46,51 @@ const Campaigns = () => {
 					bg={"#C8FFE2"}
 				/>
 			</div>
-			<div className="mb-4">
-				<SearchFilterBar />
-			</div>
-			<div>
-				<WhiteCard>
-					<Tabs
-						tabItems={[
-							"Private Campaigns (20)",
-							"Public Campaign (10)",
-							"Yebora’s Campaign (2)",
-						]}
-						currentTab={currentTab}
-						setCurrentTab={setCurrentTab}
-					/>
-					<MUITable headers={headers} bodyData={CampaignData} />
-				</WhiteCard>
-			</div>
+			<WhiteCard>
+				<div className="flex flex-row items-center justify-between mb-6">
+					<h5>Recent activity</h5>
+					<button
+						className={styles.seeMore}
+						onClick={() => navigate("/support/all-tickets")}
+					>
+						See More
+					</button>
+				</div>
+				<div className="flex flex-col items-stretch gap-4">
+					{Array(5)
+						.fill()
+						.map((item) => (
+							<RecentActivityBar />
+						))}
+				</div>
+			</WhiteCard>
 		</div>
 	);
 };
 
-export default Campaigns;
+export default Support;
+
+export const RecentActivityBar = () => {
+	return (
+		<div className="bg-[#f5f5f5] rounded-2xl flex flex-row items-center gap-4 pl-8 py-[26px]">
+			<div className="w-[52px] h-[52px] grid place-items-center bg-[#39BD78] text-white text-lg rounded-full">
+				EL
+			</div>
+			<div>
+				<p
+					className="mb-2 text-[#121528] text-base"
+					style={{ lineHeight: "22px" }}
+				>
+					Curtis submitted a new ticket, Lorem ipsum doloret, amet, consectetur
+					adipiscifacliqsis (2337)
+				</p>
+				<p
+					className="text-base text-[rgb(18, 21, 40)] text-opacity-60"
+					style={{ lineHeight: "22px" }}
+				>
+					2 hours ago
+				</p>
+			</div>
+		</div>
+	);
+};

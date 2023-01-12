@@ -10,7 +10,7 @@ const SupportDetails = () => {
         <div
           className="flex items-center gap-4 cursor-pointer "
           role={"button"}
-          onClick={() => navigate("/support/all")}
+          onClick={() => navigate("/support/all-tickets")}
         >
           <img src={backIcon} alt="" />
           <span>#1</span>

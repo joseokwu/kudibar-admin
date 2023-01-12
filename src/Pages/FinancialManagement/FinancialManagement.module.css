@@ -1,0 +1,58 @@
+.flowBtns {
+	margin-bottom: 64px;
+}
+
+.flowBtn {
+	font-size: 16px;
+	line-height: 22px;
+	padding: 12px 28px;
+	border-radius: 32px;
+}
+
+.flowBtnActive {
+	font-weight: 600;
+	background: #328be0;
+	color: #ffffff;
+}
+
+.accountgrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.AccountCard {
+	background: #ffffff;
+	border: 1px solid rgba(18, 21, 40, 0.1);
+	border-radius: 16px;
+	height: 172px;
+	padding: 12px 2rem;
+	cursor: pointer;
+}
+
+.twoCol {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+.Tag {
+	background: rgba(50, 139, 224, 0.1);
+	border-radius: 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+	width: max-content;
+	padding: 0.5rem 1.5rem;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #121528;
+}
+
+.Tag svg {
+	cursor: pointer;
+}

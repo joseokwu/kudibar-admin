@@ -1,9 +1,7 @@
 import { useState } from "react";
 import "./styles.css";
 
-const Tabs = ({ tabItems }) => {
-	const [currentTab, setCurrentTab] = useState(0);
-
+const Tabs = ({ tabItems, currentTab, setCurrentTab }) => {
 	return (
 		<div className="Tabs">
 			{tabItems.map((tabItem, ind) => (

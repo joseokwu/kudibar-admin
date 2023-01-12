@@ -6,11 +6,11 @@ const DashboardCard = ({ bgColor, title, icon, bg, value }) => {
 			<CardBg>
 				<img src={bgColor} alt="" />
 			</CardBg>
-			<div className="flex justify-start gap-[0.7rem]">
+			<div className="flex justify-start gap-4">
 				<CardImg bg={bg}>
 					<img src={icon} alt="" />
 				</CardImg>
-				<div className="flex justify-center flex-col  items-center ">
+				<div className="flex justify-center flex-col  items-start ">
 					<p className="text-[#12152899] my-[5px]">{title}</p>
 					<h3 className="text-[32px] font-bold">{value}</h3>
 				</div>
