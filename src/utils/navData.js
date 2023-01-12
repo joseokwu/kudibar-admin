@@ -1,42 +1,53 @@
+import {
+	Homeicon,
+	UserIcon,
+	ChartIcon,
+	FinanceIcon,
+	TranzIcon,
+	SupportIcon,
+	SettingsIcon,
+	LogoutIcon,
+} from "../component/svgs";
+
 export const navs = [
-  {
-    name: "Dashboard",
-    link: `/`,
-    icon: "/asset/Homeicon.svg",
-  },
-  {
-    name: "Users",
-    link: `/users`,
-    icon: "/asset/usericon.svg",
-  },
-  {
-    name: "Campaigns",
-    link: `/campaigns`,
-    icon: "/asset/chart.svg",
-  },
-  {
-    name: "Financial Management",
-    link: `/financial-management`,
-    icon: "/asset/financeicon.svg",
-  },
-  {
-    name: "Transaction History",
-    link: `/transaction-history`,
-    icon: "/asset/tranzicon.svg",
-  },
-  {
-    name: "Support",
-    link: `/support`,
-    icon: "/asset/supporticon.svg",
-  },
-  {
-    name: "Settings",
-    link: `/settings`,
-    icon: "/asset/settingsicon.svg",
-  },
-  {
-    name: "Logout",
-    link: ``,
-    icon: "/asset/Logouticon.svg",
-  },
+	{
+		name: "Dashboard",
+		link: `/`,
+		icon: <Homeicon />,
+	},
+	{
+		name: "Users",
+		link: `/users`,
+		icon: <UserIcon />,
+	},
+	{
+		name: "Campaigns",
+		link: `/campaigns`,
+		icon: <ChartIcon />,
+	},
+	{
+		name: "Financial Management",
+		link: `/financial-management`,
+		icon: <FinanceIcon />,
+	},
+	{
+		name: "Transaction History",
+		link: `/transaction-history`,
+		icon: <TranzIcon />,
+	},
+	{
+		name: "Support",
+		link: `/support`,
+		icon: <SupportIcon />,
+	},
+	{
+		name: "Settings",
+		link: `/settings`,
+		icon: <SettingsIcon />,
+	},
+	{
+		name: "Logout",
+		link: ``,
+		icon: <LogoutIcon />,
+	},
 ];
