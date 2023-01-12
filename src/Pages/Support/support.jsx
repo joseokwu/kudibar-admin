@@ -10,13 +10,14 @@ import UserTable from "../../component/User/user.component";
 import Chart from "../../component/chart/chart.component";
 import WhiteCard from "../../component/WhiteCard";
 import { useNavigate } from "react-router-dom";
-
+import { StatusBar } from "../../component/componentHelpers/Tags/tag.style";
 import greenVector from "../../assets/svg/greenVector.png";
 import pinkVector from "../../assets/svg/pinkVector.png";
 import { SupportCard } from "../../component/card/supportCard/card.componment";
 
 const Support = () => {
 	const navigate = useNavigate();
+	const states = ["Open", "Pending", "Close"];
 
 	return (
 		<div>
@@ -54,7 +55,9 @@ const Support = () => {
 					{Array(5)
 						.fill()
 						.map((item) => (
-							<RecentActivityBar />
+							<RecentActivityBar
+								state={states[Math.ceil(Math.random() * 3 - 1)]}
+							/>
 						))}
 				</div>
 			</WhiteCard>
@@ -64,9 +67,9 @@ const Support = () => {
 
 export default Support;
 
-export const RecentActivityBar = () => {
+export const RecentActivityBar = ({ state }) => {
 	return (
-		<div className="bg-[#f5f5f5] rounded-2xl flex flex-row items-center gap-4 pl-8 py-[26px]">
+		<div className="bg-[#f5f5f5] rounded-2xl flex flex-row items-center gap-4 px-8 py-[26px]">
 			<div className="w-[52px] h-[52px] grid place-items-center bg-[#39BD78] text-white text-lg rounded-full">
 				EL
 			</div>
@@ -84,6 +87,19 @@ export const RecentActivityBar = () => {
 				>
 					2 hours ago
 				</p>
+			</div>
+			<div className="ml-auto">
+				<StatusBar
+					bg={
+						state === "Pending"
+							? "#E9A420"
+							: state === "Open"
+							? "#39BD78"
+							: "#D34646"
+					}
+				>
+					<p>{state}</p>
+				</StatusBar>
 			</div>
 		</div>
 	);
