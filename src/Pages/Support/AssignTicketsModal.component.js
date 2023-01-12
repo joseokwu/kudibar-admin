@@ -38,7 +38,7 @@ const AssignTicketsModal = ({ closeModal }) => {
 						</div>
 					</div>
 					<div className="my-6">
-						<Button variant="fullWidth">Create</Button>
+						<Button variant="fullWidth">Assign Ticket</Button>
 					</div>
 					<div className="flex flex-row items-center gap-3 mb-4">
 						<CiSquareInfo color="#D34646" />
