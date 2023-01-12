@@ -17,6 +17,7 @@ import { MdAdd, MdClose } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
 import Android12Switch from "../../component/ToggleSwitch";
 import SelectComponentBig from "../../component/SelectComponentBig";
+import ApprovePaymentModal from "./ApprovePaymentModal.component";
 
 const FinancialManagement = () => {
 	const headers = [
@@ -35,6 +36,8 @@ const FinancialManagement = () => {
 
 	const [currentTab, setCurrentTab] = useState(0);
 	const [actType, setActType] = useState(actTypes[0]);
+
+	const [approveOpen, setApproveOpen] = useState(false);
 
 	return (
 		<div>
@@ -84,7 +87,7 @@ const FinancialManagement = () => {
 							</div>
 							<div className={styles.accountgrid}>
 								<AccountCard type="details" />
-								<AccountCard type="add" />
+								<AccountCard type="add" onClick={() => setApproveOpen(true)} />
 							</div>
 						</div>
 					) : (
@@ -154,12 +157,16 @@ const FinancialManagement = () => {
 			) : (
 				<></>
 			)}
+
+			{approveOpen && (
+				<ApprovePaymentModal closeModal={() => setApproveOpen(false)} />
+			)}
 		</div>
 	);
 };
 export default FinancialManagement;
 
-const AccountCard = ({ type }) => {
+const AccountCard = ({ type, onClick }) => {
 	switch (type) {
 		case "details":
 			return (
@@ -184,7 +191,10 @@ const AccountCard = ({ type }) => {
 
 		case "add":
 			return (
-				<div className={`${styles.AccountCard} grid place-items-center`}>
+				<div
+					className={`${styles.AccountCard} grid place-items-center`}
+					onClick={onClick}
+				>
 					<MdAdd size={34} color="rgba(18, 21, 40, 0.6)" />
 				</div>
 			);
