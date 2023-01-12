@@ -62,7 +62,7 @@ export const ActionModal = ({ id, link, onClick }) => {
 	);
 };
 
-export const ActionModalSupport = ({ id, link, onClick }) => {
+export const ActionModalSupport = ({ id, link, onClick, assignFunc }) => {
 	const [showOption, setShowOption] = useState(false);
 
 	const handleShowOptions = () => {
@@ -88,7 +88,11 @@ export const ActionModalSupport = ({ id, link, onClick }) => {
 							<img src={eyeIcon} alt="" />
 						</div>
 					</Link>
-					<div className="flag_display btn" role={"button"} onClick={onClick}>
+					<div
+						className="flag_display btn"
+						role={"button"}
+						onClick={assignFunc}
+					>
 						<span>Assign Ticket</span>
 						<img src={addUserIcon} alt="" />
 					</div>

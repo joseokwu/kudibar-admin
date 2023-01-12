@@ -17,7 +17,7 @@ import { SupportCard } from "../../component/card/supportCard/card.componment";
 
 const Support = () => {
 	const navigate = useNavigate();
-	const states = ["Open", "Pending", "Close"];
+	const states = ["Opened", "Pending", "Closed"];
 
 	return (
 		<div>
@@ -93,7 +93,7 @@ export const RecentActivityBar = ({ state }) => {
 					bg={
 						state === "Pending"
 							? "#E9A420"
-							: state === "Open"
+							: state === "Opened"
 							? "#39BD78"
 							: "#D34646"
 					}
