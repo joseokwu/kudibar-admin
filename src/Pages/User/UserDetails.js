@@ -100,36 +100,26 @@ const UserDetails = () => {
             </div>
           </div>
           <div className="my-5 mx-3">
-            <div className="p-[2rem] mb-4 shadow-[0px 4px 20px rgba(27, 117, 188, 0.04)] rounded-[16px] bg-[#fff]">
+            <div className="w-full p-[2rem] mb-4 shadow-[0px 4px 20px rgba(27, 117, 188, 0.04)] rounded-[16px] bg-[#fff]">
               <div>
-                <h3 className="font-[600] text-[18px] py-[10px]">Campaign Statistics </h3>
+                <h3 className="font-[600] text-[18px] py-[10px]">User Statistics </h3>
               </div>
-              <div className="grid grid-cols-2 gap-3">
+              <div className=" grid grid-cols-2 gap-3">
                 <div
                   onClick={() => navigate("/users/user/created-campaigns")}
-                  className="w-full cursor-pointer  my-2  bg-[#FEF4E0] py-[1rem] px-[0.8rem] rounded-[8px] "
+                  className="w-full cursor-pointer  my-2  bg-[#F5F5F5] py-[1rem] px-[0.8rem] rounded-[8px] "
                 >
                   <p className="font-[400] text-[16px]">Created Campaigns</p>
-                  <span className="font[600] text-[32px] text-[#F9B32E] ">3</span>
+                  <span className="font[600] text-[32px] text-[#000000] ">3</span>
                 </div>
                 <div
                   onClick={() => navigate("/users/user/invited-campaigns")}
-                  className="w-full  cursor-pointer  my-2  bg bg-[#E0EEFA] py-[1rem] px-[0.8rem]  rounded-[8px] "
+                  className="w-full  cursor-pointer  my-2  bg bg-[#F5F5F5] py-[1rem] px-[0.8rem]  rounded-[8px] "
                 >
                   <p className="font-[400] text-[16px]">Invited Campaigns </p>
-                  <span className="font[600] text-[32px] text-[#328BE0] ">3</span>
+                  <span className="font[600] text-[32px] text-[#000000] ">3</span>
                 </div>
-                <div
-                  onClick={() => navigate("/users/user/contribution-history")}
-                  className="w-full cursor-pointer   my-2  bg bg-[#E1F5EB] py-[1rem] px-[0.8rem]  rounded-[8px] "
-                >
-                  <p className="font-[400] text-[16px]">Contribution & Donation Campaigns</p>
-                  <span className="font[600] text-[32px] text-[#39BD78] ">3</span>
-                </div>
-                <div className="w-full  my-2  bg bg-[#F8E3E3] py-[1rem] px-[0.8rem]  rounded-[8px] ">
-                  <p className="font-[400] text-[16px]">Pledges</p>
-                  <span className="font[600] text-[32px] text-[#D34646] ">43</span>
-                </div>
+                
               </div>
             </div>
             <div className="p-[2rem] mb-4 shadow-[0px 4px 20px rgba(27, 117, 188, 0.04)] rounded-[16px] bg-[#fff] mb-4 shadow-[0px 4px 20px rgba(27, 117, 188, 0.04)] rounded-[16px] bg-[#fff]">

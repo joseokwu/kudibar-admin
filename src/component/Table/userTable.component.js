@@ -2,7 +2,7 @@ import { ActionModal, StatusTag } from "../componentHelpers/Tags/Tags.component"
 import styles from "./table.module.css";
 import MyPagination from "../Pagination/paginate.component";
 import { FaSort } from "react-icons/fa";
-const Tables = ({ users, tableHeader }) => {
+const Tables = ({ users,events,guests, tableHeader, actionLink }) => {
   // console.log("index", data, "-", i);
 
   return (
@@ -28,7 +28,7 @@ const Tables = ({ users, tableHeader }) => {
           </tr>
         </thead>
         <tbody className={styles.tbody}>
-          {users.map((user, i) => {
+          {users ? users.map((user, i) => {
             const { name, phone, email, isActive, gender } = user;
             return (
               <tr key={i}>
@@ -52,6 +52,60 @@ const Tables = ({ users, tableHeader }) => {
                     <ActionModal id={i} link={"/users/user"} />
                   </div>
                 </td>
+              </tr>
+            );
+          }): events? 
+          events.map((event, i) => {
+            const { title, type, featured, promoted, date, time, status } = event;
+            
+            return (
+              <tr key={i}>
+                <td>
+                  <p>{title}</p>
+                </td>
+                <td>
+                  <p>{type}</p>
+                </td>
+                <td>
+                  <p>{featured}</p>
+                </td>
+                <td>
+                  <p>{promoted}</p>
+                </td>
+                <td>
+                  <p>{date}</p>
+                </td>
+                <td>
+                  <p>{time}</p>
+                </td>
+                <td>
+                  <StatusTag text={status} bg={status === "Published" ? "green" : status === "Pending" ? "yellow": '#023E4F'} />
+                </td>
+                <td>
+                  <div className="relative">
+                    <ActionModal id={i} link={actionLink} />
+                  </div>
+                </td>
+              </tr>
+            );
+          }): guests.map((user, i) => {
+            const { name, phone, email, isActive, gender } = user;
+            return (
+              <tr key={i}>
+                <td>
+                  <p>{name}</p>
+                </td>
+                <td>
+                  <p>{phone}</p>
+                </td>
+                <td>
+                  <p>{email}</p>
+                </td>
+                
+                <td>
+                  <p>{gender}</p>
+                </td>
+             
               </tr>
             );
           })}

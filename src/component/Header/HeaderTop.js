@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import backarrowIcon from "../../assets/svg/backicon.svg";
-const HeaderTop = ({ children, path, text }) => {
+const HeaderTop = ({ children, path, text, buttons }) => {
   return (
     <>
       <Link to={path}>
@@ -10,7 +10,10 @@ const HeaderTop = ({ children, path, text }) => {
         </div>
       </Link>
       <div className="mx-3 flex items-center justify-between">
-        <p className="text-[24px] font-semibold ">{text}</p>
+        <div className="flex gap-[2rem]"><p className="text-[24px] font-semibold ">{text}</p>
+      {buttons && buttons}
+        </div>
+        
         <div className="relative">{children}</div>
       </div>
     </>

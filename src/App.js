@@ -20,6 +20,8 @@ import ViewTicket from "./Pages/Support/ViewTicket";
 import Settings from "./Pages/Settings";
 import UserSettingDetails from "./Pages/Settings/TabItem/UserDetails.component";
 import RolesDetail from "./Pages/Settings/TabItem/RolesDetails.component";
+import Events from "./Pages/Events";
+import EventDetails from "./Pages/Events/EventDetails";
 function App() {
 	return (
 		<Router>
@@ -32,6 +34,7 @@ function App() {
 					/>
 					<Route path="/users" element={<User />} />
 					<Route path="/financial-management" element={<></>} />
+					<Route path="/events" element={<Events/>} />
 					<Route path="/transaction-history" element={<TransactionHistory />} />
 					<Route path="/support" element={<Support />} />
 					<Route path="/support/all-tickets" element={<AllTickets />} />
@@ -46,6 +49,7 @@ function App() {
 					<Route path="/campaigns" element={<Campaigns />} />
 
 					<Route path="/users/user" element={<UserDetails />} />
+					<Route path="/events/event" element={<EventDetails />} />
 					<Route path="/support/details/:id" element={<ViewTicket />} />
 					<Route
 						path="/users/user/created-campaigns"

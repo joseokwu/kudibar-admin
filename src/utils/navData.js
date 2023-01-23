@@ -21,10 +21,15 @@ export const navs = [
 		icon: <UserIcon />,
 	},
 	{
-		name: "Campaigns",
-		link: `/campaigns`,
-		icon: <ChartIcon />,
+		name: 'Events',
+		link: `/events`,
+		icon: <ChartIcon/>
 	},
+	// {
+	// 	name: "Campaigns",
+	// 	link: `/campaigns`,
+	// 	icon: <ChartIcon />,
+	// },
 	{
 		name: "Financial Management",
 		link: `/financial-management`,
@@ -35,6 +40,17 @@ export const navs = [
 		link: `/transaction-history`,
 		icon: <TranzIcon />,
 	},
+	{
+		name: "Log Management",
+		link: `/financial-management`,
+		icon: <TranzIcon />,
+	},
+	{
+		name: "Notifications",
+		link: `/financial-management`,
+		icon: <TranzIcon />,
+	},
+	
 	{
 		name: "Support",
 		link: `/support`,

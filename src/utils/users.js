@@ -50,6 +50,73 @@ export const users = [
   },
 ];
 
+
+export const events = [
+  {
+    title: "Arthur’s Wedding",
+    type: "Private",
+    featured: "Yes",
+    promoted: "No",
+    date: "25th Feb 2022",
+    time: "17:21",
+    status: "Published",
+  },
+  {
+    title: "Arthur’s Wedding",
+    type: "Private",
+    featured: "Yes",
+    promoted: "No",
+    date: "25th Feb 2022",
+    time: "17:21",
+    status: "Published",
+  },
+  {
+    title: "Arthur’s Wedding",
+    type: "Private",
+    featured: "Yes",
+    promoted: "No",
+    date: "25th Feb 2022",
+    time: "17:21",
+    status: "Published",
+  },
+  {
+    title: "Arthur’s Wedding",
+    type: "Private",
+    featured: "Yes",
+    promoted: "No",
+    date: "25th Feb 2022",
+    time: "17:21",
+    status: "Published",
+  },
+  {
+    title: "Arthur’s Wedding",
+    type: "Private",
+    featured: "Yes",
+    promoted: "No",
+    date: "25th Feb 2022",
+    time: "17:21",
+    status: "Published",
+  },
+  {
+    title: "Arthur’s Wedding",
+    type: "Private",
+    featured: "Yes",
+    promoted: "No",
+    date: "25th Feb 2022",
+    time: "17:21",
+    status: "Published",
+  },
+  {
+    title: "Arthur’s Wedding",
+    type: "Private",
+    featured: "Yes",
+    promoted: "No",
+    date: "25th Feb 2022",
+    time: "17:21",
+    status: "Published",
+  },
+];
+
 export const userSets = [
   {
     user: "Obodo Bright",

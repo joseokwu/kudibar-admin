@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
-export const StatCard = ({ pr, pb, pt, title, amount, icon }) => {
+export const StatCard = ({ pr, pb, pt, backgroundSVG, title, amount }) => {
   return (
     <Container>
+      <Img src={backgroundSVG} alt="" pr={pr} pb={pb} pt={pt} />
+
+      <h1>{amount}</h1>
       <p>{title}</p>
-      <span className="flex w-8 h-10 align-center gap-[1rem]">{icon && <img height={5} width={30} src={icon} alt="icon"></img>}<h1>{amount}</h1></span>
-      
-      
     </Container>
   );
 };

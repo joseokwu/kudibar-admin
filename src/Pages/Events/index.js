@@ -4,16 +4,16 @@ import filterIcon from "../../assets/svg/Filter.svg";
 import searchIcon from "../../assets/svg/Search.svg";
 import nouserIcon from "../../assets/svg/nousericon.svg";
 import Tables from "../../component/Table/userTable.component";
-import { users } from "../../utils/users";
+import { events, users } from "../../utils/users";
 import { Button } from "../../component/Button";
-const User = () => {
-  const userTableHeader = ["Name", "Phone Number", "Email", "Status", "Gender", "Action"];
+const Events = () => {
+  const userTableHeader = ["Title", "Type", "Featured", "Promoted", "Date", "Time", "Status", "Action"];
 
   return (
     <div>
       <div>
-        <p className="text-[24px] my-2 font-semibold">Users</p>
-        <p className="text-[14px] font-semibold">{users.length} users</p>
+        <p className="text-[24px] my-2 font-semibold">Events</p>
+        <p className="text-[14px] font-semibold">{users.length} events</p>
       </div>
 
       {users.length > 0 ? (
@@ -39,11 +39,13 @@ const User = () => {
             
           </div>
           <section className="w-full flex items-center  gap-[10px] p-[0.3rem] rounded-[10px] bg-[whitesmoke] pt-6">
-              <Button title={`General Users (${users.length})`} solid={'#01789A'}/>
-              <Button title={`Kudibar Users (${users.length})`}/>
+              <Button title={`All Events (${users.length})`} solid={'#01789A'}/>
+              <Button title={`Pending Events (${users.length})`}/>
+              <Button title={`Approved Events (${users.length})`}/>
+              <Button title={`Declined Events (${users.length})`}/>
             </section>
           <section className="mt-5 p-4 w-full bg-white rounded-md">
-            <Tables tableHeader={userTableHeader} users={users} actionLink="/users/user"/>
+            <Tables tableHeader={userTableHeader} events={events} actionLink="/events/event" />
           </section>
         </>
       ) : (
@@ -57,4 +59,4 @@ const User = () => {
     </div>
   );
 };
-export default User;
+export default Events;
