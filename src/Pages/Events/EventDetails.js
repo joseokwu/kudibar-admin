@@ -34,10 +34,16 @@ import { userData2 } from "../../utils/userdata";
 import Tables from "../../component/Table/userTable.component";
 import { users } from "../../utils/users";
 import VideoBox from "../../component/Events/VideoBox";
+import { TrashModal } from "./Modals/TrashModal";
+import { EditModal } from "./Modals/EditModal";
 
 const EventDetails = () => {
   const [showFlag, setShowFlag] = useState(false);
+  const [showEdit, setShowEdit] = useState(false);
+  const [showTrash, setShowTrash] = useState(false);
   const [showFlagModal, setShowFlagModal] = useState(false);
+  const [showTrashModal, setShowTrashModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
   const [currentTab, setCurrentTab] = useState(0);
   const [actType, setActType] = useState();
 
@@ -52,12 +58,28 @@ const EventDetails = () => {
     setShowFlag(false);
   };
 
+  const handleShowEditModal = () => {
+    setShowEditModal(true);
+    setShowEdit(false);
+  };
+
+  const handleShowTrashModal = () => {
+    setShowTrashModal(true);
+    setShowTrash(false);
+  };
+
   const userTableHeader = ["Name", "Phone Number", "Email", "Gender"];
 
   return (
     <>
       {showFlagModal && (
         <FlagModal closeModal={() => setShowFlagModal(false)} />
+      )}
+      {showTrashModal && (
+        <TrashModal closeModal={() => setShowTrashModal(false)} />
+      )}
+      {showEditModal && (
+        <EditModal closeModal={() => setShowEditModal(false)} />
       )}
       <div>
         <HeaderTop
@@ -80,7 +102,7 @@ const EventDetails = () => {
             {showFlag && (
               <div className="w-[10rem] shadow-[0px 4px 20px rgba(27, 117, 188, 0.04)]  rounded-[12px] z-[1] py-3 px-[10px] absolute top-[20px] right-[10px] bg-[#fff]">
                 <div
-                  onClick={handleShowFlagModal}
+                  onClick={handleShowEditModal}
                   className="flex items-center justify-around gap-[5px]"
                   role={"button"}
                 >
@@ -96,7 +118,7 @@ const EventDetails = () => {
                   <img src={yellowflag} alt="" />
                 </div>
                 <div
-                  onClick={handleShowFlagModal}
+                  onClick={handleShowTrashModal}
                   className="flex items-center justify-around gap-[5px]"
                   role={"button"}
                 >

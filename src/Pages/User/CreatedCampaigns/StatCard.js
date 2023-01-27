@@ -1,11 +1,37 @@
 import styled from "@emotion/styled";
-export const StatCard = ({ pr, pb, pt, title, amount, icon }) => {
+export const StatCard = ({
+  pr,
+  pb,
+  pt,
+  title,
+  amount,
+  icon,
+  icon2,
+  amount2,
+  select,
+}) => {
   return (
     <Container>
-      <p>{title}</p>
-      <span className="flex w-8 h-10 align-center gap-[1rem]">{icon && <img height={5} width={30} src={icon} alt="icon"></img>}<h1>{amount}</h1></span>
-      
-      
+      <span className="flex justify-between items-center">
+        <p>{title}</p>
+        {select && (
+          <select className="text-[#12152899] font-[8px] p-[0.2rem] border-[1px] rounded border-[#1215281A]">
+            <option value="" className="p-2">
+              USD
+            </option>
+            <option value="Most Recent"> Weekly</option>
+            <option value="Most Recent">6 Month</option>
+            <option value="Most Recent">Yearly</option>
+          </select>
+        )}
+      </span>
+
+      <span className="flex w-8 h-10 align-center gap-[1rem]">
+        {icon && <img height={5} width={30} src={icon} alt="icon"></img>}
+        <h1>{amount}</h1>{" "}
+        {icon2 && <img height={5} width={30} src={icon2} alt="icon"></img>}
+        <h1>{amount2}</h1>
+      </span>
     </Container>
   );
 };
@@ -19,7 +45,7 @@ export const Container = styled.div`
   box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.1);
   //   height: 136px;
   overflow: hidden;
-  width: 240px;
+  /* width: 240px; */
   background: #fff;
   &::first-of-type {
     margin-top: 0px;

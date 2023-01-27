@@ -8,7 +8,7 @@ import actionIcon from "../../assets/svg/actionicon.svg";
 import { TrazModal } from "../../Pages/TransactionHistory/TrazModal";
 import { useState } from "react";
 
-const TranzTable = ({ data, tableHeader, showModal }) => {
+const LogTable = ({ data, tableHeader, showModal }) => {
   const [open, setOpen] = useState(false);
 
   const openModal = () => {
@@ -28,49 +28,20 @@ const TranzTable = ({ data, tableHeader, showModal }) => {
         </thead>
         <tbody className={styles.tbody}>
           {data.map((value, i) => {
-            const { payment_id, amount, name, type, date, status } = value;
+            const { user, date, time, activity } = value;
             return (
               <tr key={i}>
                 <td>
-                  <p>{payment_id}</p>
+                  <p>{user}</p>
+                </td>
+                <td>
+                  <p>{activity}</p>
                 </td>
                 <td>
                   <p>{date}</p>
                 </td>
                 <td>
-                  <p>{amount}</p>
-                </td>
-                <td>
-                  <p>{name}</p>
-                </td>
-                <td>
-                  <p>{type}</p>
-                </td>
-
-                <td>
-                  <StatusTag
-                    text={status}
-                    bg={
-                      status === "Failed"
-                        ? "#D34646"
-                        : status === "Successful"
-                        ? "#39BD78"
-                        : "#F9B32E"
-                    }
-                  />
-                </td>
-
-                <td>
-                  <div className="relative cursor-pointer">
-                    <span
-                      className="underline text-[#328BE0] "
-                      role="button"
-                      onClick={openModal}
-                    >
-                      View
-                    </span>
-                    {open && <TrazModal closeModal={() => setOpen(false)} />}
-                  </div>
+                  <p>{time}</p>
                 </td>
               </tr>
             );
@@ -83,4 +54,4 @@ const TranzTable = ({ data, tableHeader, showModal }) => {
     </div>
   );
 };
-export default TranzTable;
+export default LogTable;

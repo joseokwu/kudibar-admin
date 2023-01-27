@@ -2,7 +2,7 @@ import Modal from "../../component/Modal";
 import React from "react";
 import { StatusTag } from "../../component/componentHelpers/Tags/Tags.component";
 
-export const TrazModal = ({ closeModal }) => {
+export const LogModal = ({ closeModal }) => {
   return (
     <Modal closeModal={closeModal}>
       <div className="p-2 w-[450px] flex items-center justify-center">

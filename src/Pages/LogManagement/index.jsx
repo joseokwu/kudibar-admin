@@ -1,4 +1,4 @@
-import styles from "./TransactionHistory.module.css";
+// import styles from "./LogManagemnt.module.css";
 import DashboardCard from "../../component/card/dashboardCard/card.component";
 import usericon from "../../assets/svg/users.svg";
 import charticon from "../../assets/svg/chart.svg";
@@ -16,23 +16,16 @@ import MUITable from "../../component/Table";
 import swapIcon from "../../assets/svg/Swap.svg";
 import filterIcon from "../../assets/svg/Filter.svg";
 import searchIcon from "../../assets/svg/Search.svg";
-import { TransactionHistoryData } from "../../utils/users";
+import { logs } from "../../utils/users";
 import { CardsContainer } from "../User/CreatedCampaigns/campaigns.styles";
 import { StatCard } from "../User/CreatedCampaigns/StatCard";
 import CampaignTable from "../../component/Table/campaignTable";
 import TranzTable from "../../component/Table/TransTable";
+import LogTable from "../../component/Table/LogTable";
 
-const TransactionHistory = () => {
+const LogManagement = () => {
   const navigate = useNavigate();
-  const header = [
-    "Reference Id",
-    "Date",
-    "Amount",
-    "Name",
-    "Type",
-    "Status",
-    "Action",
-  ];
+  const header = ["User", "Activity", "Date", "Time"];
 
   const headers = [
     { label: "Payment ID", key: "payment_id", action: "actions" },
@@ -46,10 +39,8 @@ const TransactionHistory = () => {
   return (
     <div>
       <div className="my-2">
-        <p className="text-[24px] font-semibold">Transaction Management</p>
-        <p className="text-[14px] font-semibold">
-          {TransactionHistoryData.length} Transactions
-        </p>
+        <p className="text-[24px] font-semibold">Log Management</p>
+        <p className="text-[14px] font-semibold">{logs.length} Transactions</p>
       </div>
 
       <div className="mt-6 bg-white rounded-[12px] p-4 flex items-center gap-[8px] my-4 ">
@@ -80,18 +71,10 @@ const TransactionHistory = () => {
       </div> */}
       <div className="mb-4">
         <WhiteCard>
-          <Tabs
-            tabItems={[
-              "All Transactions (2000)",
-              "Payouts (400)",
-              "Total Purchased (200)",
-              "Promotions (1400)",
-            ]}
-          />
           {/* <MUITable headers={headers} bodyData={TransactionHistoryData} /> */}
-          <TranzTable
+          <LogTable
             tableHeader={header}
-            data={TransactionHistoryData}
+            data={logs}
             // showModal={handleShowModal}
           />
         </WhiteCard>
@@ -100,4 +83,4 @@ const TransactionHistory = () => {
   );
 };
 
-export default TransactionHistory;
+export default LogManagement;

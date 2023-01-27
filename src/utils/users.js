@@ -50,6 +50,167 @@ export const users = [
   },
 ];
 
+export const supports = [
+  {
+    sender: "Winner Oguns",
+    email: "winnersoguns@gmail.com",
+    tag: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+    status: "Delivered",
+  },
+  {
+    sender: "Winner Oguns",
+    email: "winnersoguns@gmail.com",
+    tag: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+    status: "Delivered",
+  },
+  {
+    sender: "Winner Oguns",
+    email: "winnersoguns@gmail.com",
+    tag: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+    status: "Delivered",
+  },
+  {
+    sender: "Winner Oguns",
+    email: "winnersoguns@gmail.com",
+    tag: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+    status: "Delivered",
+  },
+  {
+    sender: "Winner Oguns",
+    email: "winnersoguns@gmail.com",
+    tag: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+    status: "Delivered",
+  },
+];
+
+export const adminUsers = [
+  {
+    name: "New Update",
+    email: "Chinmay30@gmail.com",
+    role: "Admin",
+    date: "1/03/2022",
+    status: "active",
+  },
+  {
+    name: "New Update",
+    email: "Chinmay30@gmail.com",
+    role: "Admin",
+    date: "1/03/2022",
+    status: "active",
+  },
+  {
+    name: "New Update",
+    email: "Chinmay30@gmail.com",
+    role: "Admin",
+    date: "1/03/2022",
+    status: "active",
+  },
+  {
+    name: "New Update",
+    email: "Chinmay30@gmail.com",
+    role: "Admin",
+    date: "1/03/2022",
+    status: "active",
+  },
+  {
+    name: "New Update",
+    email: "Chinmay30@gmail.com",
+    role: "Admin",
+    date: "1/03/2022",
+    status: "active",
+  },
+];
+
+export const email = [
+  {
+    title: "New Update",
+    slug: "All Users",
+    type: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+  },
+  {
+    title: "New Update",
+    slug: "All Users",
+    type: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+  },
+  {
+    title: "New Update",
+    slug: "All Users",
+    type: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+  },
+  {
+    title: "New Update",
+    slug: "All Users",
+    type: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+  },
+  {
+    title: "New Update",
+    slug: "All Users",
+    type: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+  },
+];
+
+export const notif = [
+  {
+    title: "New Update",
+    recipient: "All Users",
+    type: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+    status: "Delivered",
+  },
+  {
+    title: "New Update",
+    recipient: "All Users",
+    type: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+    status: "Delivered",
+  },
+  {
+    title: "New Update",
+    recipient: "All Users",
+    type: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+    status: "Delivered",
+  },
+  {
+    title: "New Update",
+    recipient: "All Users",
+    type: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+    status: "Delivered",
+  },
+  {
+    title: "New Update",
+    recipient: "All Users",
+    type: "Push notification",
+    date: "1/03/2022",
+    time: "17:20",
+    status: "Delivered",
+  },
+];
 
 export const events = [
   {
@@ -189,11 +350,45 @@ export const allTicketsData = [
   },
 ];
 
+export const logs = [
+  {
+    user: "John Obi",
+    activity: "New event approved",
+    date: "1/03/2022",
+    time: "17:20",
+  },
+  {
+    user: "John Obi",
+    activity: "New event approved",
+    date: "1/03/2022",
+    time: "17:20",
+  },
+  {
+    user: "John Obi",
+    activity: "New event approved",
+    date: "1/03/2022",
+    time: "17:20",
+  },
+  {
+    user: "John Obi",
+    activity: "New event approved",
+    date: "1/03/2022",
+    time: "17:20",
+  },
+  {
+    user: "John Obi",
+    activity: "New event approved",
+    date: "1/03/2022",
+    time: "17:20",
+  },
+];
+
 export const TransactionHistoryData = [
   {
     payment_id: "5687856677667",
     date: "1/03/2022",
     amount: "+40,000",
+    name: "John Obi",
     type: "Credit",
     status: "Successful",
   },
@@ -201,6 +396,7 @@ export const TransactionHistoryData = [
     payment_id: "5687856677667",
     date: "1/03/2022",
     amount: "+40,000",
+    name: "John Obi",
     type: "Credit",
     status: "Failed",
   },
@@ -208,6 +404,7 @@ export const TransactionHistoryData = [
     payment_id: "5687856677667",
     date: "1/03/2022",
     amount: "+40,000",
+    name: "John Obi",
     type: "Debit",
     status: "Successful",
   },
@@ -215,6 +412,7 @@ export const TransactionHistoryData = [
     payment_id: "5687856677667",
     date: "1/03/2022",
     amount: "+40,000",
+    name: "John Obi",
     type: "Credit",
     status: "Successful",
   },

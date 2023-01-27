@@ -1,9 +1,10 @@
 import LineChart from "./LineChart";
 import { Chart } from "chart.js/auto";
+import DoughnutChart from "./DoughnutChart";
 
-const Charts = ({ height }) => {
+const Charts2 = ({ height }) => {
   const dataSet = {
-    labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
+    labels: ["Mon", "Tues"],
     datasets: [
       {
         label: "Visits",
@@ -33,8 +34,8 @@ const Charts = ({ height }) => {
         </select>
       </div>
       {/* <Line data={dataSet} /> */}
-      <LineChart data={dataSet} legend={true} height={height} />
+      <DoughnutChart data={dataSet} legend={true} height={height} />
     </div>
   );
 };
-export default Charts;
+export default Charts2;

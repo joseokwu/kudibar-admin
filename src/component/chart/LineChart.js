@@ -1,5 +1,5 @@
 import { Line } from "react-chartjs-2";
-const LineChart = ({ data, legend }) => {
+const LineChart = ({ data, legend, height }) => {
   return (
     <div>
       <Line
@@ -25,16 +25,16 @@ const LineChart = ({ data, legend }) => {
                 display: false,
               },
             },
-            // yAxes: [
-            //   {
-            //     ticks: {
-            //       beginAtZero: true,
-            //     },
-            //   },
-            // ],
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
           },
         }}
-        // height={200}
+        height={height}
         width={300}
         data={data}
       />
